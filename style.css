@@ -1,0 +1,121 @@
+:root {
+  --Pumpkin: #FF6700;
+  --AFW: #EBEBEB;
+  --Silver: #C0C0C0;
+  --BB: #3A6EA5;
+  --PB: #004E98;
+  /* Dark */
+  --Black: #000000;
+  --Oxford-Blue: #14213D;
+  --Orange: #FCA311;
+  --Platinum: #E5E5E5;
+  --White: #FFFFFF;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 100vw;
+  justify-content: center;
+  background: var(--AFW);
+  color: var(--PB)
+}
+
+header,
+nav,
+main,
+section,
+aside,
+footer {
+  display: flex;
+  width: 100vw;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+li,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+header {
+  height: 6vh;
+  flex: 1 1 100vw;
+  background: var(--Pumpkin);
+  justify-content: center;
+  align-items: center;
+}
+
+#Menu {
+  display: flex;
+  position: absolute;
+  width: 40vw;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  left: 0px;
+}
+
+.open {
+  display: flex;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  font-size: 38px;
+  justify-content: center;
+  align-items: center;
+  color: var(--White);
+  text-decoration: none;
+  border-radius: 50%;
+  left: 5px;
+  top: 1;
+}
+
+#Menu .close {
+  position: absolute;
+}
+
+footer {
+  flex: 1 1 100vw;
+}
+
+#BottomBar {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  align-items: center;
+  height: 5vh;
+  background: var(--Pumpkin);
+}
+
+#BottomBar ul {
+  display: flex;
+  width: 100vw;
+  height: 5vh;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#BottomBar li {
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+}
+
+#BottomBar a {
+  display: flex;
+  width: 40px;
+  height: 50px;
+  font-size: 28px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: var(--Pumpkin);
+  color: var(--AFW);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+#BottomBar a:hover {
+  transform: translateY(-15px) scale(1.1);
+}
