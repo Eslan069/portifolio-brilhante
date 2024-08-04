@@ -7,13 +7,14 @@
   <title>Elias Abreu</title>
   <link href="reset.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  <link href="img/icon.png" rel="icon">
 </head>
 
 <body>
   <header>
-    <buttom>Abrir</buttom>
-    <nav>
-      <buttom>Fechar</buttom>
+    <buttom class="open"><ion-icon name="ellipsis-vertical"></ion-icon></buttom>
+    <nav id="Menu">
+      <buttom calss="close"><ion-icon name="close-outline"></ion-icon></buttom>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="#about">Sobre</a></li>
@@ -58,10 +59,10 @@
   <footer>
     <nav id="BottomBar">
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="chatOn/chat.html">Contato</a></li>
-        <li><a href="#project">Projetos</a></li>
-        <li><a href="config.html">Configuração</a></li>
+      <li><a href="#home"><ion-icon name="home-outline"></ion-icon></a></li>
+        <li><a href="chatOn/chat.html"><ion-icon name="chatbubble-outline"></ion-icon></a></li>
+        <li><a href="#project"><ion-icon name="cube-outline"></ion-icon></a></li>
+        <li><a href="config.html"><ion-icon name="settings-outline"></ion-icon></a></li>
       </ul>
     </nav>
   </footer>
@@ -69,4 +70,5 @@
   <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'></script>
   <script src="script.js"></script>
 </body>
+
 </html>
