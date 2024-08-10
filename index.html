@@ -12,9 +12,9 @@
 
 <body>
   <header>
-    <span class="open"><ion-icon name="ellipsis-vertical"></ion-icon></span>
+    <button calss="hamburger"><ion-icon name="ellipsis-vertical"></ion-icon></button>
     <nav id="Menu">
-      <span calss="close"><ion-icon name="close-outline"></ion-icon></span>
+      <button calss="hamburger"><ion-icon name="close-outline"></ion-icon></button>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="#about">Sobre</a></li>
@@ -22,6 +22,12 @@
         <li><a href="#contact">Contato</a></li>
       </ul>
     </nav>
+    <span>
+      <label>
+        <input type="checkbox" name="theme">
+        <span class="btn"><ion-icon name="moon-outline"></ion-icon></span>
+      </label>
+    </span>
   </header>
 
   <main>
@@ -31,7 +37,7 @@
         <p>Desenvolvedor Front-End</p>
       </div>
     </section>
-    
+
     <section id="about">
       <div class="container">
         <h2>Experiências</h2>
@@ -40,7 +46,7 @@
         <p>Web Design Web-Design</p>
       </div>
     </section>
-    
+
     <section id="project">
       <div class="container">
         <h3>Projetos Desenvolvidos</h3>
@@ -48,7 +54,7 @@
         <li><a href="components/calculator/index.html">Calculadora</a></li>
       </div>
     </section>
-    
+
     <section id="contact">
       <div class="container">
         <h3>Informações</h3>
@@ -60,7 +66,7 @@
   <footer>
     <nav id="BottomBar">
       <ul>
-      <li><a href="#home"><ion-icon name="home-outline"></ion-icon></a></li>
+        <li><a href="#home"><ion-icon name="home-outline"></ion-icon></a></li>
         <li><a href="chatOn/chat.html"><ion-icon name="chatbubble-outline"></ion-icon></a></li>
         <li><a href="#project"><ion-icon name="cube-outline"></ion-icon></a></li>
         <li><a href="config.html"><ion-icon name="settings-outline"></ion-icon></a></li>
@@ -69,7 +75,7 @@
   </footer>
 
   <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'></script>
-  <script src="script.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>

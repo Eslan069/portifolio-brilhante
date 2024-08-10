@@ -1,30 +1,32 @@
 html {
   --bg: #f5f6f7;
-  --color-text: #9c9c9c;
-  --color-orange: #ff6a00;
-  --color-shadow: -4px -2px 4px 0px #ffffff,
+  --color-text: #4f4e4e;
+  --cl-icon: #ffffff;
+  --cl-org: #ff6a00;
+  --cl-sdw: -4px -2px 4px 0px #ffffff,
                   4px 2px 6px 0px #DFE4EA;
-  --color-orange-shadow: -3px -3px 10px rgba(255, 106, 0, 0.966),
+  --cl-org-sdw: -3px -3px 10px rgba(255, 106, 0, 0.966),
                   3px 3px 15px rgba(0,0,0,0.5);
-  --color-inset-shadow: inset -2px -2px 6px rgba(255,255,255,0.8),
+  --cl-inset-sdw: inset -2px -2px 6px rgba(255,255,255,0.8),
                       inset 2px 2px 6px rgba(0,0,0,0.1);
-  --color-equal-shadow: -2px -2px 6px rgb(3, 169, 244, 0.01),
+  --clr-equal-sdw: -2px -2px 6px rgb(3, 169, 244, 0.01),
                       2px 2px 6px rgba(0,0,0,0.3);
-  --color-equal-inset-shadow: inset -2px -2px 6px rgba(255, 106, 0,0.5),git
+  --cl-equal-inset-sdw: inset -2px -2px 6px rgba(255, 106, 0,0.5),
                           inset 2px 2px 6px rgba(0,0,0,0.3);
 }
 
 html[data-theme=dark] {
   --bg: #131419;
-  --color-text: #fff;
-  --color-orange: #ff6a00;
-  --color-shadow: -3px -3px 10px rgba(255,255,255,0.05),
+  --color-text: #6f6b6b;
+  --cl-icon: #ffffff;
+  --cl-org: #ff6a00;
+  --cl-sdw: -3px -3px 10px rgba(255,255,255,0.05),
                   3px 3px 15px rgba(0,0,0,0.5);
-  --color-inset-shadow: inset -2px -2px 6px rgba(255,255,255,0.01),
+  --cl-inset-sdw: inset -2px -2px 6px rgba(255,255,255,0.01),
                       inset 2px 2px 6px rgba(0,0,0,0.8);
-  --color-equal-shadow: -2px -2px 6px rgb(3, 169, 244, 0.01),
+  --cl-equal-sdw: -2px -2px 6px rgb(3, 169, 244, 0.01),
                           2px 2px 6px rgba(0,0,0,0.8);
-  --color-equal-inset-shadow: inset -2px -2px 6px rgba(255, 106, 0,0.2),
+  --cl-equal-inset-sdw: inset -2px -2px 6px rgba(255, 106, 0,0.2),
                               inset 2px 2px 6px rgba(0,0,0,0.5);
 }
 
@@ -35,6 +37,7 @@ body {
   justify-content: center;
   background: var(--bg);
   color: var(--color-text);
+  transition: 1s ease-in-out;
 }
 
 header,
@@ -49,56 +52,48 @@ footer {
   font-weight: 600;
 }
 
-li a {
+a {
   text-decoration: none;
   overflow: hidden;
+  list-style: none;
   -webkit-tap-highlight-color: transparent;
 }
 
 header {
   height: 6vh;
   flex: 1 1 100vw;
-  background: var(--color-orange);
+  background: var(--cl-org);
   justify-content: center;
   align-items: center;
 }
 
 #Menu {
-  display: flex;
+  display: none;
+  max-width: 120px;
+  height: 30%;
   position: absolute;
-  width: 100px;
-  height: 40%;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background: var(--color-orange);
+  flex-direction: column;
+  background: var(--cl-org);
   border-radius: 10px;
   left: 0;
   top: 0;
 }
 
-.open {
-  display: flex;
+.hamburger {
+  display: none;
   position: absolute;
   width: 30px;
   height: 30px;
   font-size: 38px;
   justify-content: center;
   align-items: center;
-  color: var(--bg);
+  color: var(--cl-icon);
   text-decoration: none;
   border-radius: 50%;
   left: 5px;
   top: 1;
-}
-
-.close {
-  display: flex;
-  width: 30px;
-  height: 30px;
-  font-size: 38px;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
 }
 
 main {
@@ -116,7 +111,7 @@ main {
   text-align: center;
   margin: 10px;
   border-radius: 10px;
-  box-shadow: var(--color-shadow);
+  box-shadow: var(--cl-sdw);
 }
 
 #about {
@@ -126,7 +121,7 @@ main {
   text-align: center;
   margin: 10px;
   border-radius: 10px;
-  box-shadow: var(--color-shadow);
+  box-shadow: var(--cl-sdw);
 }
 
 #project {
@@ -136,7 +131,7 @@ main {
   text-align: center;
   margin: 10px;
   border-radius: 10px;
-  box-shadow: var(--color-shadow);
+  box-shadow: var(--cl-sdw);
 }
 
 #contact {
@@ -147,7 +142,7 @@ main {
   margin: 10px;
   margin-right: 10px;
   border-radius: 10px;
-  box-shadow: var(--color-shadow);
+  box-shadow: var(--cl-sdw);
 }
 
 footer {
@@ -155,12 +150,12 @@ footer {
 }
 
 #BottomBar {
-  display: flex;
+  display: none;
   position: fixed;
   bottom: 0;
   align-items: center;
   height: 5vh;
-  background: var(--color-orange);
+  background: var(--cl-org);
 }
 
 #BottomBar ul {
@@ -180,32 +175,31 @@ footer {
 #BottomBar a {
   display: flex;
   width: 40px;
-  height: 50px;
+  height: 40px;
   font-size: 28px;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  background: var(--color-orange);
-  color: var(--color-text);
+  background: var(--cl-org);
+  color: var(--cl-icon);
   border-radius: 50%;
   transition: all 0.3s ease;
 }
 
 #BottomBar a:hover {
-  transform: translateY(-15px) scale(1.1);
+  transform: translateY(-10px) scale(1.1);
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (max-width: 760px){
+  #Menu {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
   #BottomBar {
-    display: none;
+    display: flex;
   }
 }
-
-/*@media screen and (min-width: 767px){
-  #main {
-    justify-content: space-around;
-    flex-direction: column;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-}*/
