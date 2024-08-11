@@ -4,15 +4,15 @@ html {
   --cl-icon: #ffffff;
   --cl-org: #ff6a00;
   --cl-sdw: -4px -2px 4px 0px #ffffff,
-                  4px 2px 6px 0px #DFE4EA;
+    4px 2px 6px 0px #DFE4EA;
   --cl-org-sdw: -3px -3px 10px rgba(255, 106, 0, 0.966),
-                  3px 3px 15px rgba(0,0,0,0.5);
-  --cl-inset-sdw: inset -2px -2px 6px rgba(255,255,255,0.8),
-                      inset 2px 2px 6px rgba(0,0,0,0.1);
+    3px 3px 15px rgba(0, 0, 0, 0.5);
+  --cl-inset-sdw: inset -2px -2px 6px rgba(255, 255, 255, 0.8),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
   --clr-equal-sdw: -2px -2px 6px rgb(3, 169, 244, 0.01),
-                      2px 2px 6px rgba(0,0,0,0.3);
-  --cl-equal-inset-sdw: inset -2px -2px 6px rgba(255, 106, 0,0.5),
-                          inset 2px 2px 6px rgba(0,0,0,0.3);
+    2px 2px 6px rgba(0, 0, 0, 0.3);
+  --cl-equal-inset-sdw: inset -2px -2px 6px rgba(255, 106, 0, 0.5),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 html[data-theme=dark] {
@@ -20,14 +20,14 @@ html[data-theme=dark] {
   --color-text: #6f6b6b;
   --cl-icon: #ffffff;
   --cl-org: #ff6a00;
-  --cl-sdw: -3px -3px 10px rgba(255,255,255,0.05),
-                  3px 3px 15px rgba(0,0,0,0.5);
-  --cl-inset-sdw: inset -2px -2px 6px rgba(255,255,255,0.01),
-                      inset 2px 2px 6px rgba(0,0,0,0.8);
+  --cl-sdw: -3px -3px 10px rgba(172, 169, 169, 0.05),
+    3px 3px 15px rgba(0, 0, 0, 0.5);
+  --cl-inset-sdw: inset -2px -2px 6px rgba(255, 255, 255, 0.01),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.8);
   --cl-equal-sdw: -2px -2px 6px rgb(3, 169, 244, 0.01),
-                          2px 2px 6px rgba(0,0,0,0.8);
-  --cl-equal-inset-sdw: inset -2px -2px 6px rgba(255, 106, 0,0.2),
-                              inset 2px 2px 6px rgba(0,0,0,0.5);
+    2px 2px 6px rgba(0, 0, 0, 0.8);
+  --cl-equal-inset-sdw: inset -2px -2px 6px rgba(255, 106, 0, 0.2),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 body {
@@ -52,10 +52,16 @@ footer {
   font-weight: 600;
 }
 
+.hamburger,
+button,
+#checkbox,
+#BottomBar {
+  display: none;
+}
+
 a {
   text-decoration: none;
-  overflow: hidden;
-  list-style: none;
+  color: var(--cl-icon);
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -68,32 +74,36 @@ header {
 }
 
 #Menu {
-  display: none;
-  max-width: 120px;
-  height: 30%;
-  position: absolute;
-  justify-content: space-between;
+  display: flex;
+  width: 500px;
+  height: 40px;
+  justify-content: end;
   align-items: center;
-  flex-direction: column;
-  background: var(--cl-org);
   border-radius: 10px;
-  left: 0;
   top: 0;
 }
 
-.hamburger {
-  display: none;
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  font-size: 38px;
-  justify-content: center;
-  align-items: center;
+#Menu ul {
+  display: flex;
+}
+
+#Menu li {
+  margin: 0 4px 0 4px;
+}
+
+.dark {
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
   color: var(--cl-icon);
-  text-decoration: none;
-  border-radius: 50%;
-  left: 5px;
-  top: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.dark .bnt {
+  cursor: pointer;
 }
 
 main {
@@ -129,6 +139,7 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
+  list-style: none;
   margin: 10px;
   border-radius: 10px;
   box-shadow: var(--cl-sdw);
@@ -147,59 +158,92 @@ main {
 
 footer {
   flex: 1 1 100vw;
-}
-
-#BottomBar {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  align-items: center;
-  height: 5vh;
-  background: var(--cl-org);
-}
-
-#BottomBar ul {
   display: flex;
-  width: 100vw;
-  height: 5vh;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  background: #ff6a00;
 }
 
-#BottomBar li {
-  display: flex;
-  align-items: center;
-  border-radius: 30px;
-}
+@media screen and (max-width: 760px) {
+  header {
+    justify-content: space-between;
+  }
 
-#BottomBar a {
-  display: flex;
-  width: 40px;
-  height: 40px;
-  font-size: 28px;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  background: var(--cl-org);
-  color: var(--cl-icon);
-  border-radius: 50%;
-  transition: all 0.3s ease;
-}
-
-#BottomBar a:hover {
-  transform: translateY(-10px) scale(1.1);
-}
-
-@media screen and (max-width: 760px){
   #Menu {
+    display: flex;
+    max-width: 120px;
+    height: 30%;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background: var(--cl-org);
+    border-radius: 10px;
+    left: 0;
+    top: 0;
+  }
+
+  #Menu ul {
+    display: block;
+  }
+
+  button {
     display: flex;
   }
 
   .hamburger {
-    display: block;
+    display: flex;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    font-size: 38px;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    color: var(--cl-icon);
+    text-decoration: none;
+    border: none;
+    border-radius: 50%;
+    top: 1;
   }
 
   #BottomBar {
     display: flex;
+    position: fixed;
+    bottom: 0;
+    align-items: center;
+    height: 5vh;
+    background: var(--cl-org);
+  }
+
+  #BottomBar ul {
+    display: flex;
+    width: 100vw;
+    height: 5vh;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  #BottomBar li {
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+  }
+
+  #BottomBar a {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: var(--cl-org);
+    color: var(--cl-icon);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+
+  #BottomBar a:hover {
+    transform: translateY(-8px);
   }
 }

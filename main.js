@@ -1,6 +1,6 @@
-window.alert('Hi');
-window.prompt('What your name');
-
+/*ar name = window.prompt('What your name');
+window.alert('Ola ' + name);
+*/
 let checkbox = document.querySelector('input[name=theme]');
 checkbox.addEventListener('change',function(){
     if(this.checked){
@@ -10,8 +10,5 @@ checkbox.addEventListener('change',function(){
     }
 })
 
-const hamburger = document.querySelector(".hamburger");
-const nav = document.querySelector("#Menu");
-
-hamburger.addEventListener("click", () =>
-nav.classList.toggle("active"));
+var hamburger = document.querySelector('.hamburger');
+var menu = document.querySelector('#Menu');

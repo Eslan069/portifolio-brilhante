@@ -12,9 +12,9 @@
 
 <body>
   <header>
-    <button calss="hamburger"><ion-icon name="ellipsis-vertical"></ion-icon></button>
+    <button active="hamburger()" class="hamburger"><ion-icon name="ellipsis-vertical"></ion-icon></button>
     <nav id="Menu">
-      <button calss="hamburger"><ion-icon name="close-outline"></ion-icon></button>
+      <button active="hamburger()" class="hamburger"><ion-icon name="close-outline"></ion-icon></button>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="#about">Sobre</a></li>
@@ -22,12 +22,12 @@
         <li><a href="#contact">Contato</a></li>
       </ul>
     </nav>
-    <span>
+    <div class="dark">
       <label>
-        <input type="checkbox" name="theme">
-        <span class="btn"><ion-icon name="moon-outline"></ion-icon></span>
+        <input type="checkbox" name="theme" id="checkbox">
+        <span class="bnt"><ion-icon name="moon"></ion-icon></span>
       </label>
-    </span>
+    </div>
   </header>
 
   <main>
