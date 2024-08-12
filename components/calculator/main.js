@@ -86,11 +86,9 @@ for(var i=0;i<number.length;i++){
     });
 }
 
-let checkbox = document.querySelector('input[name=theme]');
-checkbox.addEventListener('change',function(){
-    if(this.checked){
-        document.documentElement.setAttribute('data-theme','dark');
-    }else{
-        document.documentElement.setAttribute('data-theme','light');
-    }
-})
+let button = document.getElementById('theme-toggle');
+    button.addEventListener('click', function() {
+    let currentTheme = document.documentElement.getAttribute('data-theme');
+    let newTheme = (currentTheme === 'dark') ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+});

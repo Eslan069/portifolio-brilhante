@@ -1,4 +1,4 @@
-html {
+:root {
   --bg: #f5f6f7;
   --color-text: #4f4e4e;
   --cl-icon: #ffffff;
@@ -15,7 +15,7 @@ html {
     inset 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-html[data-theme=dark] {
+[data-theme=dark] {
   --bg: #131419;
   --color-text: #6f6b6b;
   --cl-icon: #ffffff;
@@ -37,7 +37,7 @@ body {
   justify-content: center;
   background: var(--bg);
   color: var(--color-text);
-  transition: 1s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 header,
@@ -52,10 +52,8 @@ footer {
   font-weight: 600;
 }
 
-.hamburger,
-button,
-#checkbox,
-#BottomBar {
+.menuToggle,
+#bottomBar {
   display: none;
 }
 
@@ -73,7 +71,7 @@ header {
   align-items: center;
 }
 
-#Menu {
+#menu {
   display: flex;
   width: 500px;
   height: 40px;
@@ -83,26 +81,26 @@ header {
   top: 0;
 }
 
-#Menu ul {
+#menu ul {
   display: flex;
 }
 
-#Menu li {
+#menu li {
   margin: 0 4px 0 4px;
 }
 
-.dark {
-  height: 40px;
-  width: 40px;
-  font-size: 20px;
-  color: var(--cl-icon);
+#themeToggle {
   display: flex;
-  align-items: center;
+  width: 30px;
+  height: 30px;
+  font-size: 38px;
   justify-content: center;
-  cursor: pointer;
-}
-
-.dark .bnt {
+  align-items: center;
+  background: transparent;
+  color: var(--cl-icon);
+  text-decoration: none;
+  border: none;
+  border-radius: 50%;
   cursor: pointer;
 }
 
@@ -167,8 +165,8 @@ footer {
     justify-content: space-between;
   }
 
-  #Menu {
-    display: flex;
+  #menu {
+    display: none;
     max-width: 120px;
     height: 30%;
     position: absolute;
@@ -182,17 +180,16 @@ footer {
     top: 0;
   }
 
-  #Menu ul {
+  #menu.open {
+    display: flex;
+  }
+
+  #menu ul {
     display: block;
   }
 
-  button {
+  .menuToggle {
     display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-    position: absolute;
     width: 30px;
     height: 30px;
     font-size: 38px;
@@ -203,10 +200,10 @@ footer {
     text-decoration: none;
     border: none;
     border-radius: 50%;
-    top: 1;
+    cursor: pointer;
   }
 
-  #BottomBar {
+  #bottomBar {
     display: flex;
     position: fixed;
     bottom: 0;
@@ -215,7 +212,7 @@ footer {
     background: var(--cl-org);
   }
 
-  #BottomBar ul {
+  #bottomBar ul {
     display: flex;
     width: 100vw;
     height: 5vh;
@@ -223,13 +220,13 @@ footer {
     flex-wrap: wrap;
   }
 
-  #BottomBar li {
+  #bottomBar li {
     display: flex;
     align-items: center;
     border-radius: 30px;
   }
 
-  #BottomBar a {
+  #bottomBar a {
     display: flex;
     width: 40px;
     height: 40px;
@@ -243,7 +240,7 @@ footer {
     transition: all 0.3s ease;
   }
 
-  #BottomBar a:hover {
+  #bottomBar a:hover {
     transform: translateY(-8px);
   }
 }

@@ -1,14 +1,18 @@
-/*ar name = window.prompt('What your name');
-window.alert('Ola ' + name);
-*/
-let checkbox = document.querySelector('input[name=theme]');
-checkbox.addEventListener('change',function(){
-    if(this.checked){
-        document.documentElement.setAttribute('data-theme','dark');
-    }else{
-        document.documentElement.setAttribute('data-theme','light');
-    }
-})
+let button = document.getElementById('themeToggle');
 
-var hamburger = document.querySelector('.hamburger');
-var menu = document.querySelector('#Menu');
+button.addEventListener('click', function () {
+    let currentTheme = document.documentElement.getAttribute('data-theme');
+    let newTheme = (currentTheme === 'dark') ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+});
+
+let menuToggle = document.querySelector('.menuToggle');
+let nav = document.querySelector('#menu');
+
+menuToggle.addEventListener('click', function () {
+    if (nav.classList.contains('open')) {
+        nav.classList.add('open');
+    } else {
+        nav.classList.add('open');
+    }
+});

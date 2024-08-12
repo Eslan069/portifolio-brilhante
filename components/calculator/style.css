@@ -5,7 +5,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-html {
+:root {
   --bg: #f5f6f7;
   --color-text: #9c9c9c;
   --color-orange: #ff6a00;
@@ -19,7 +19,7 @@ html {
                           inset 2px 2px 6px rgba(0,0,0,0.3);
 }
 
-html[data-theme=dark] {
+[data-theme=dark] {
   --bg: #131419;
   --color-text: #fff;
   --color-orange: #ff6a00;
@@ -89,6 +89,13 @@ body {
   z-index: 100;
   left: 30%;
   border-radius: 0.625rem;
+}
+
+#theme-toggle {
+  background: transparent;
+  color: var(--color-orange);
+  border: none;
+  border-radius: 50%;
 }
 
 #result {

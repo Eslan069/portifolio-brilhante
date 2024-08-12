@@ -12,9 +12,9 @@
 
 <body>
   <header>
-    <button active="hamburger()" class="hamburger"><ion-icon name="ellipsis-vertical"></ion-icon></button>
-    <nav id="Menu">
-      <button active="hamburger()" class="hamburger"><ion-icon name="close-outline"></ion-icon></button>
+    <button class="menuToggle"><ion-icon name="ellipsis-vertical"></ion-icon></button>
+    <nav id="menu">
+      <button class="menuToggle"><ion-icon name="close-outline"></ion-icon></button>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="#about">Sobre</a></li>
@@ -22,12 +22,7 @@
         <li><a href="#contact">Contato</a></li>
       </ul>
     </nav>
-    <div class="dark">
-      <label>
-        <input type="checkbox" name="theme" id="checkbox">
-        <span class="bnt"><ion-icon name="moon"></ion-icon></span>
-      </label>
-    </div>
+    <button id="themeToggle"><ion-icon name="moon"></ion-icon></button>
   </header>
 
   <main>
@@ -64,7 +59,7 @@
   </main>
 
   <footer>
-    <nav id="BottomBar">
+    <nav id="bottomBar">
       <ul>
         <li><a href="#home"><ion-icon name="home-outline"></ion-icon></a></li>
         <li><a href="chatOn/chat.html"><ion-icon name="chatbubble-outline"></ion-icon></a></li>
