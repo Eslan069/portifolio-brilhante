@@ -1,32 +1,32 @@
 :root {
-  --bg: #f5f6f7;
-  --color-text: #4f4e4e;
-  --cl-icon: #ffffff;
-  --cl-org: #ff6a00;
-  --cl-sdw: -4px -2px 4px 0px #ffffff,
-    4px 2px 6px 0px #DFE4EA;
-  --cl-org-sdw: -3px -3px 10px rgba(255, 106, 0, 0.966),
+  --bg: linear-gradient(90deg, hsla(217, 25%, 21%, 1) 0%,
+      hsla(254, 22%, 34%, 1) 100%);
+  --color-text: #060A10;
+  --color-text-bg: #F8F8FF;
+  --color-orange: #FE5A1D;
+  --color-shadow: #060A10;
+  --color-org-shadow: -3px -3px 10px rgba(255, 106, 0, 0.966),
     3px 3px 15px rgba(0, 0, 0, 0.5);
-  --cl-inset-sdw: inset -2px -2px 6px rgba(255, 255, 255, 0.8),
+  --color-inset-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.8),
     inset 2px 2px 6px rgba(0, 0, 0, 0.1);
-  --clr-equal-sdw: -2px -2px 6px rgb(3, 169, 244, 0.01),
+  --color-equal-shadow: -2px -2px 6px rgb(3, 169, 244, 0.01),
     2px 2px 6px rgba(0, 0, 0, 0.3);
-  --cl-equal-inset-sdw: inset -2px -2px 6px rgba(255, 106, 0, 0.5),
+  --color-equal-inset-shadow: inset -2px -2px 6px rgba(255, 106, 0, 0.5),
     inset 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 [data-theme=dark] {
-  --bg: #131419;
-  --color-text: #6f6b6b;
-  --cl-icon: #ffffff;
-  --cl-org: #ff6a00;
-  --cl-sdw: -3px -3px 10px rgba(172, 169, 169, 0.05),
-    3px 3px 15px rgba(0, 0, 0, 0.5);
-  --cl-inset-sdw: inset -2px -2px 6px rgba(255, 255, 255, 0.01),
+  --bg: linear-gradient(90deg, hsla(216, 45%, 4%, 1) 0%,
+      hsla(217, 25%, 21%, 1) 100%);
+  --color-text: #F8F8FF;
+  --color-text-bg: #4C4369;
+  --color-orange: #F94D00;
+  --color-shadow: #060A10;
+  --color-inset-shadow: inset -2px -2px 6px #ffffff03,
     inset 2px 2px 6px rgba(0, 0, 0, 0.8);
-  --cl-equal-sdw: -2px -2px 6px rgb(3, 169, 244, 0.01),
+  --color-equal-shadow: -2px -2px 6px rgb(3, 169, 244, 0.01),
     2px 2px 6px rgba(0, 0, 0, 0.8);
-  --cl-equal-inset-sdw: inset -2px -2px 6px rgba(255, 106, 0, 0.2),
+  --color-equal-inset-shadow: inset -2px -2px 6px rgba(255, 106, 0, 0.2),
     inset 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
@@ -42,6 +42,7 @@ body {
 
 header,
 nav,
+#menu,
 main,
 section,
 aside,
@@ -57,28 +58,23 @@ footer {
   display: none;
 }
 
-a {
-  text-decoration: none;
-  color: var(--cl-icon);
-  -webkit-tap-highlight-color: transparent;
-}
-
 header {
-  height: 6vh;
+  height: 70vh;
   flex: 1 1 100vw;
-  background: var(--cl-org);
-  justify-content: center;
+  background: transparent;
+  justify-content: space-evenly;
   align-items: center;
+  border-radius: 14px;
+  box-shadow: -20px 15px 25px var(--color-shadow);
+  margin: 5% 5% 0 5%;
 }
 
 #menu {
-  display: flex;
   width: 500px;
-  height: 40px;
+  height: 60px;
   justify-content: end;
   align-items: center;
   border-radius: 10px;
-  top: 0;
 }
 
 #menu ul {
@@ -97,19 +93,24 @@ header {
   justify-content: center;
   align-items: center;
   background: transparent;
-  color: var(--cl-icon);
+  color: var(--color-text);
   text-decoration: none;
   border: none;
   border-radius: 50%;
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+  color: var(--color-orange);
+  -webkit-tap-highlight-color: transparent;
+}
+
+
 main {
-  display: flex;
-  justify-content: space-around;
+  display: wrap;
   flex-wrap: wrap;
-  margin-left: 10px;
-  margin-right: 10px;
+  justify-content: space-around;
 }
 
 #home {
@@ -117,9 +118,9 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: var(--cl-sdw);
+  margin: 2% 5% 2% 5%;
+  border-radius: 14px;
+  box-shadow: -20px 15px 25px var(--color-shadow);
 }
 
 #about {
@@ -127,57 +128,60 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: var(--cl-sdw);
+  margin: 0 5% 2% 5%;
+  border-radius: 14px;
+  box-shadow: -20px 15px 25px var(--color-shadow);
 }
 
 #project {
   display: flex;
+  width: 30%;
+  height: 40%;
   justify-content: center;
   align-items: center;
   text-align: center;
   list-style: none;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: var(--cl-sdw);
+  margin: 0 5% 2% 5%;
+  border-radius: 14px;
+  box-shadow: -20px 15px 25px var(--color-shadow);
 }
 
 #contact {
   display: flex;
+  width: 30%;
+  height: 40%;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 10px;
-  margin-right: 10px;
-  border-radius: 10px;
-  box-shadow: var(--cl-sdw);
+  margin: 0 5% 2% 5%;
+  border-radius: 14px;
+  box-shadow: -20px 15px 25px var(--color-shadow);
 }
 
 footer {
+  display: block;
   flex: 1 1 100vw;
-  display: flex;
   background: #ff6a00;
 }
 
 @media screen and (max-width: 760px) {
   header {
+    height: 30vh;
     justify-content: space-between;
   }
 
   #menu {
     display: none;
-    max-width: 120px;
+    max-width: 100px;
     height: 30%;
     position: absolute;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    background: var(--cl-org);
+    background: var(--bg);
     border-radius: 10px;
-    left: 0;
-    top: 0;
+    box-shadow: var(--color-shadow);
   }
 
   #menu.open {
@@ -188,19 +192,39 @@ footer {
     display: block;
   }
 
+  #menu li {
+    margin: 5px 0 5px;
+  }
+
   .menuToggle {
     display: flex;
-    width: 30px;
-    height: 30px;
-    font-size: 38px;
+    width: 40px;
+    height: 40px;
+    font-size: 35px;
+    text-decoration: none;
     justify-content: center;
     align-items: center;
     background: transparent;
-    color: var(--cl-icon);
-    text-decoration: none;
+    color: var(--color-text);
     border: none;
     border-radius: 50%;
     cursor: pointer;
+  }
+
+  #home {
+    margin: 5%;
+  }
+
+  #about {
+    margin: 0 5% 5% 5%;
+  }
+
+  #project {
+    margin: 0 5% 5% 5%;
+  }
+
+  #contact {
+    margin: 0 5% 5% 5%;
   }
 
   #bottomBar {
@@ -209,7 +233,10 @@ footer {
     bottom: 0;
     align-items: center;
     height: 5vh;
-    background: var(--cl-org);
+    background: var(--bg);
+    transition: 0.5s;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 -5px 30px var(--color-shadow);
   }
 
   #bottomBar ul {
@@ -234,13 +261,12 @@ footer {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    background: var(--cl-org);
-    color: var(--cl-icon);
+    color: var(--color-text);
     border-radius: 50%;
     transition: all 0.3s ease;
   }
 
   #bottomBar a:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
   }
 }
