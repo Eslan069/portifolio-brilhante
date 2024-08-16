@@ -2,25 +2,30 @@
   --bg: linear-gradient(90deg, hsla(217, 25%, 21%, 1) 0%,
       hsla(254, 22%, 34%, 1) 100%);
   --color-text: #060A10;
-  --color-text-bg: #F8F8FF;
-  --color-orange: #FE5A1D;
+  --color-text-bg: #;
+  --color-primary: #E867EA;
+  --color-secondary: #4EA38A;
+  --color-tertiary: #48F2FB;
   --color-shadow: #060A10;
   --color-org-shadow: -3px -3px 10px rgba(255, 106, 0, 0.966),
-    3px 3px 15px rgba(0, 0, 0, 0.5);
+  3px 3px 15px rgba(0, 0, 0, 0.5);
   --color-inset-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.8),
-    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+  inset 2px 2px 6px rgba(0, 0, 0, 0.1);
   --color-equal-shadow: -2px -2px 6px rgb(3, 169, 244, 0.01),
-    2px 2px 6px rgba(0, 0, 0, 0.3);
+  2px 2px 6px rgba(0, 0, 0, 0.3);
   --color-equal-inset-shadow: inset -2px -2px 6px rgba(255, 106, 0, 0.5),
-    inset 2px 2px 6px rgba(0, 0, 0, 0.3);
+  inset 2px 2px 6px rgba(0, 0, 0, 0.3);
+  --menu-toggle: none;
 }
 
 [data-theme=dark] {
   --bg: linear-gradient(90deg, hsla(216, 45%, 4%, 1) 0%,
-      hsla(217, 25%, 21%, 1) 100%);
+  hsla(217, 25%, 21%, 1) 100%);
   --color-text: #F8F8FF;
-  --color-text-bg: #4C4369;
-  --color-orange: #F94D00;
+  --color-text-bg: #F8F8FF;
+  --color-primary: #48F2FB;
+  --color-secondary: #fb7703;
+  --color-tertiary: #E867EA;
   --color-shadow: #060A10;
   --color-inset-shadow: inset -2px -2px 6px #ffffff03,
     inset 2px 2px 6px rgba(0, 0, 0, 0.8);
@@ -30,14 +35,18 @@
     inset 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
+[data-menu=open] {
+  --menu-toggle: flex;
+}
+
 body {
   display: flex;
   flex-wrap: wrap;
   flex: 1 1 100vw;
   justify-content: center;
   background: var(--bg);
-  color: var(--color-text);
-  transition: 0.5s ease-in-out;
+  color: var(--color-text-bg);
+  transition: 0.4s ease;
 }
 
 header,
@@ -93,16 +102,21 @@ header {
   justify-content: center;
   align-items: center;
   background: transparent;
-  color: var(--color-text);
+  color: var(--color-tertiary);
   text-decoration: none;
   border: none;
   border-radius: 50%;
   cursor: pointer;
 }
 
+h1, h2, h3, p {
+  transition: 0.4s ease;
+}
+
 a {
   text-decoration: none;
-  color: var(--color-orange);
+  color: var(--color-primary);
+  transition: 0.4s ease;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -111,6 +125,7 @@ main {
   display: wrap;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-bottom: 8%;
 }
 
 #home {
@@ -125,35 +140,40 @@ main {
 
 #about {
   display: flex;
+  width: 30%;
+  height: 40vh;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0 5% 2% 5%;
-  border-radius: 14px;
+  margin: 0 5% 0 5%;
+  background: var(--color-primary);
+  border-radius: 10px;
   box-shadow: -20px 15px 25px var(--color-shadow);
 }
 
 #project {
   display: flex;
-  width: 30%;
-  height: 40%;
+  width: 20%;
+  height: 40vh;
   justify-content: center;
   align-items: center;
   text-align: center;
   list-style: none;
   margin: 0 5% 2% 5%;
+  background: var(--color-secondary);
   border-radius: 14px;
   box-shadow: -20px 15px 25px var(--color-shadow);
 }
 
 #contact {
   display: flex;
-  width: 30%;
-  height: 40%;
+  width: 20%;
+  height: 40vh;
   justify-content: center;
   align-items: center;
   text-align: center;
   margin: 0 5% 2% 5%;
+  background: var(--color-tertiary);
   border-radius: 14px;
   box-shadow: -20px 15px 25px var(--color-shadow);
 }
@@ -171,7 +191,7 @@ footer {
   }
 
   #menu {
-    display: none;
+    display: var(--menu-toggle);
     max-width: 100px;
     height: 30%;
     position: absolute;
@@ -182,10 +202,6 @@ footer {
     background: var(--bg);
     border-radius: 10px;
     box-shadow: var(--color-shadow);
-  }
-
-  #menu.open {
-    display: flex;
   }
 
   #menu ul {
@@ -205,10 +221,11 @@ footer {
     justify-content: center;
     align-items: center;
     background: transparent;
-    color: var(--color-text);
+    color: var(--color-primary);
     border: none;
     border-radius: 50%;
     cursor: pointer;
+    z-index: 1;
   }
 
   #home {
@@ -261,7 +278,7 @@ footer {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: var(--color-text);
+    color: var(--color-primary);
     border-radius: 50%;
     transition: all 0.3s ease;
   }

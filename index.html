@@ -13,8 +13,7 @@
 <body>
   <header>
     <button class="menuToggle"><ion-icon name="ellipsis-vertical"></ion-icon></button>
-    <nav id="menu">
-      <button class="menuToggle"><ion-icon name="close-outline"></ion-icon></button>
+    <nav id="menu" data-menu="close">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="#about">Sobre</a></li>
@@ -29,14 +28,14 @@
   <main>
     <section id="home">
       <div class="container">
-        <h1>Elias Abreu</h1>
+        <h2>Elias Abreu</h2>
         <p>Desenvolvedor Front-End</p>
       </div>
     </section>
 
     <section id="about">
       <div class="container">
-        <h2>Experiências</h2>
+        <h3>Experiências</h3>
         <p>Desenvolvedor Front-End</p>
         <p>Desenvolvedor Back-End</p>
         <p>Web Design Web-Design</p>
@@ -47,14 +46,16 @@
       <div class="container">
         <h3>Projetos Desenvolvidos</h3>
         <p>Web Sites, web paginas etc.</p>
-        <li><a href="components/calculator/index.html">Calculadora</a></li>
+        <a href="components/calculator/index.html">Calculadora</a>
       </div>
     </section>
 
     <section id="contact">
       <div class="container">
         <h3>Informações</h3>
-        <p>Informações para contato</p>
+        <a href="https://www.instagram.com/eliasabrell">Instagram</a>
+        <a href="https://github.com/Eslan069">Github</a>
+        <a href="#">LinkedIn</a>
       </div>
     </section>
   </main>
@@ -72,6 +73,7 @@
 
   <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'></script>
   <script src="main.js"></script>
+  <noscript>Para usar o site, ative o JavaScript no seu navegador.</noscript>
 </body>
 
 </html>

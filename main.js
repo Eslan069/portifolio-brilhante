@@ -1,18 +1,14 @@
-let button = document.getElementById('themeToggle');
+let themeToggle = document.getElementById('themeToggle');
+let menuToggle = document.querySelector('.menuToggle');
 
-button.addEventListener('click', function () {
+themeToggle.addEventListener('click', function () {
     let currentTheme = document.documentElement.getAttribute('data-theme');
     let newTheme = (currentTheme === 'dark') ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', newTheme);
 });
 
-let menuToggle = document.querySelector('.menuToggle');
-let nav = document.querySelector('#menu');
-
 menuToggle.addEventListener('click', function () {
-    if (nav.classList.contains('open')) {
-        nav.classList.add('open');
-    } else {
-        nav.classList.add('open');
-    }
+    let openMenu = document.documentElement.getAttribute('data-menu');
+    let stateMenu = (openMenu === 'open') ? 'close' : 'open';
+    document.documentElement.setAttribute('data-menu', stateMenu);
 });
