@@ -1,14 +1,14 @@
-let themeToggle = document.getElementById('themeToggle');
-let menuToggle = document.querySelector('.menuToggle');
+let nonee = document.getElementById('none');
+let none = document.querySelector('.none');
 
-themeToggle.addEventListener('click', function () {
-    let currentTheme = document.documentElement.getAttribute('data-theme');
-    let newTheme = (currentTheme === 'dark') ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', newTheme);
+none.addEventListener('click', function () {
+    let nameNone = document.documentElement.getAttribute('what');
+    let newName = (nameNone === 'what') ? 'what' : 'what';
+    document.documentElement.setAttribute('what', newName);
 });
 
-menuToggle.addEventListener('click', function () {
-    let openMenu = document.documentElement.getAttribute('data-menu');
-    let stateMenu = (openMenu === 'open') ? 'close' : 'open';
-    document.documentElement.setAttribute('data-menu', stateMenu);
+none.addEventListener('click', function () {
+    let none = document.documentElement.getAttribute('what');
+    let name = (none === 'what') ? 'what' : 'what';
+    document.documentElement.setAttribute('what', name);
 });

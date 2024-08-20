@@ -1,79 +1,85 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="light">
+<html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Elias Abreu</title>
-  <link href="reset.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-  <link href="img/icon.png" rel="icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <title>Abrell</title>
 </head>
 
 <body>
-  <header>
-    <button class="menuToggle"><ion-icon name="ellipsis-vertical"></ion-icon></button>
-    <nav id="menu" data-menu="close">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#project">Projetos</a></li>
-        <li><a href="#contact">Contato</a></li>
-      </ul>
-    </nav>
-    <button id="themeToggle"><ion-icon name="moon"></ion-icon></button>
-    <h1>I'm Elias Abreu</h1>
-  </header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#message">Mensagem</a></li>
+                <li><a href="#more">Mais</a></li>
+            </ul>
+        </nav>
+        <button id="theme"></button>
+    </header>
 
-  <main>
-    <section id="home">
-      <div class="container">
-        <h2>Elias Abreu</h2>
-        <p>Desenvolvedor Front-End</p>
-      </div>
-    </section>
+    <main>
+        <section id="home">
+            <h1>Mr. Abrell</h1>
+        </section>
 
-    <section id="about">
-      <div class="container">
-        <h3>Experiências</h3>
-        <p>Desenvolvedor Front-End</p>
-        <p>Desenvolvedor Back-End</p>
-        <p>Web Design Web-Design</p>
-      </div>
-    </section>
+        <section id="about">
+            <h2>Quem eu sou</h2>
+            <p>Eu sou Abrell, desenvolvedor Front-end.<br></p>
+            <p>Minhas habilidades</p>
+            <input type="radio" name="" id="">
+        </section>
 
-    <section id="project">
-      <div class="container">
-        <h3>Projetos Desenvolvidos</h3>
-        <p>Web Sites, web paginas etc.</p>
-        <a href="components/calculator/index.html">Calculadora</a>
-      </div>
-    </section>
+        <section id="projects">
+            <h3>Projetos desenvolvidos</h3>
+            <a href="components/calculator/index.html">Calculadora</a>
+        </section>
 
-    <section id="contact">
-      <div class="container">
-        <h3>Informações</h3>
-        <a href="https://www.instagram.com/eliasabrell">Instagram</a>
-        <a href="https://github.com/Eslan069">Github</a>
-        <a href="#">LinkedIn</a>
-      </div>
-    </section>
-  </main>
+        <section id="message"></section>
 
-  <footer>
-    <nav id="bottomBar">
-      <ul>
-        <li><a href="#home"><ion-icon name="home-outline"></ion-icon></a></li>
-        <li><a href="chatOn/chat.html"><ion-icon name="chatbubble-outline"></ion-icon></a></li>
-        <li><a href="#project"><ion-icon name="cube-outline"></ion-icon></a></li>
-        <li><a href="config.html"><ion-icon name="settings-outline"></ion-icon></a></li>
-      </ul>
-    </nav>
-  </footer>
+        <section id="more"></section>
 
-  <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'></script>
-  <script src="main.js"></script>
-  <noscript>Para usar o site, ative o JavaScript no seu navegador.</noscript>
+        <aside class="sliderEnd"></aside>
+    </main>
+
+    <footer>
+        <details class="listEnd">
+            <p>Redes</p>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon>X</a>
+            <a href="https://www.instagram.com/eliasabrell/profilecard"><ion-icon
+                    name="logo-instagram"></ion-icon>Instagram</a>
+            <a href="#"><ion-icon name="logo-youtube"></ion-icon>YouTube</a>
+            <a href="https://github.com/eslan069"><ion-icon name="logo-github"></ion-icon>GitHub</a>
+            <a href="#"><ion-icon name="logo-linkedin"></ion-icon>LinkedIn</a>
+        </details>
+        <details class="listEnd">
+            <p>Contato</p>
+            <a>Telefone</a>
+            <a>E-mail:</a>
+        </details>
+
+        <nav id="browser">
+            <ul>
+                <li><a href="#home"><ion-icon name="home"></ion-icon></a></li>
+                <li><a href="#about"><ion-icon name="information-circle"></ion-icon></a></li>
+                <li><a href="#projects"><ion-icon name="cube"></ion-icon></a></li>
+                <li><a href="#message"><ion-icon name="chatbubble"></ion-icon></a></li>
+                <li><a href="#more"><ion-icon name="ellipsis-horizontal"></ion-icon></a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="main.js"></script>
+    <noscript>Para usar este site, por favor, ative o JavaScript no seu navegador.</noscript>
 </body>
 
 </html>
