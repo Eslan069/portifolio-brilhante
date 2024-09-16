@@ -1,7 +1,8 @@
 :root {
     --bg: #2d2d2d;
     --bgh: #2c2c2c;
-    --bgf: #1b1b1b;
+    --bgb: #2a2a2a;
+    --bgf: #181818;
     --elm: #fbfbfb;
     --txt: #dddddd;
     --icn: #676767;
@@ -29,7 +30,6 @@ body {
     flex-wrap: wrap;
     place-items: center;
     background: var(--bg);
-    /*overflow: hidden;*/
 }
 
 header,
@@ -46,19 +46,24 @@ nav a,
 main,
 .slider,
 .subtitle,
+#about,
+#projects,
+#service,
 aside,
 footer {
     display: flex;
 }
 
 header {
-    flex: 1 1 100vw;
+    width: 100vw;
     height: 7.5vh;
     align-items: center;
+    position: fixed;
     background: var(--bgh);
     box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.05),
-    3px 3px 15px rgba(0, 0, 0, 0.5);
-    z-index: 3;
+        3px 3px 15px rgba(0, 0, 0, 0.5);
+    top: 0;
+    z-index: 4;
 }
 
 h1 {
@@ -73,18 +78,18 @@ h1 {
 }
 
 nav {
-    width: 98%;
+    width: 100%;
     justify-content: end;
 }
 
 nav ul {
-    width: 98%;
+    width: 100%;
     align-items: center;
     justify-content: flex-end;
 }
 
 .menu li {
-    margin: 0 1.5rem;
+    margin: 0 1.7rem;
 }
 
 .menu li a {
@@ -105,7 +110,7 @@ nav ul {
     background: transparent;
     border: none;
     border-radius: 50%;
-    margin: 0 3rem 0 1.5rem;
+    margin: 0 3rem 0 1.7rem;
     cursor: pointer;
 }
 
@@ -127,7 +132,6 @@ nav ul {
 
 .links {
     justify-content: center;
-
 }
 
 .icons {
@@ -140,15 +144,38 @@ nav ul {
     height: 28px;
     align-items: center;
     justify-content: center;
-    color: var(--bg);
-    background-color: var(--elm);
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
     font-size: .95rem;
+    background-color: var(--elm);
     border: none;
-    border-radius: .8rem;
-    margin: 0 1.5rem;
+    border-radius: .7rem;
+    margin: 0 1.7rem;
     cursor: pointer;
+
+    & .down {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "Roboto", sans-serif;
+        font-weight: 600;
+        color: var(--bg);
+    }
+
+    & .icon {
+        display: flex;
+        font-size: 0;
+    }
+}
+
+#cv:hover {
+    font-size: 0;
+    transition: 300ms;
+
+    & .icon {
+        font-size: 1.6rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        transition: 400ms ease-in-out;
+    }
 }
 
 main {
@@ -160,6 +187,7 @@ main {
 .slider {
     width: auto;
     height: 80%;
+    margin-top: 3.45rem;
 }
 
 .item {
@@ -211,12 +239,11 @@ main {
         display: block;
         width: 35%;
         top: 20%;
-        left: 7.4rem;
+        left: 8rem;
         position: absolute;
         color: white;
         text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
         opacity: 1;
-        z-index: 2;
     }
 
     & .title {
@@ -235,14 +262,20 @@ main {
 
     & button {
         width: fit-content;
+        position: absolute;
         background: var(--elm);
         font-family: "Inter";
         font-size: .9rem;
         font-weight: 600;
-        border: 2px solid white;
-        border-radius: .8rem;
-        padding: .35rem .75rem;
+        border: none;
+        border-radius: .7rem;
+        padding: .45rem .85rem;
         cursor: pointer;
+        z-index: 2;
+    }
+
+    & button:hover {
+        background: var(--txt);
     }
 }
 
@@ -252,7 +285,8 @@ main {
     height: 600px;
     align-items: center;
     justify-content: space-between;
-    top: 0;
+    background: transparent;
+    top: 3.45rem;
     z-index: 1;
     user-select: none;
 
@@ -271,6 +305,11 @@ main {
         color: none;
         cursor: pointer;
         opacity: .5;
+    }
+
+    & .btn:hover {
+        background-color: var(--elm);
+        opacity: .8;
     }
 }
 
@@ -293,12 +332,29 @@ main {
 }
 
 #about {
-    display: flex;
     position: relative;
-    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 1rem;
+    margin: 0 4rem 4rem;
+    background: var(--bgb);
+}
+
+#projects {
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    margin: 4rem 4rem;
+    background-color: midnightblue;
+}
+
+#service {
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    margin: 4rem 4rem;
+    background-color: red;
 }
 
 h3 {
@@ -337,14 +393,73 @@ a {
     font-style: normal;
 }
 
+aside {
+    width: 30vw;
+    height: 91.5vh;
+    position: fixed;
+    background-color: black;
+    border-radius: 1rem;
+    left: 2px;
+    bottom: 4px;
+    z-index: 3;
+
+    & #open {
+        display: block;
+        position: absolute;
+        height: 20px;
+    }
+    
+    & .contente {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 60px;
+        bottom: 1rem;
+    }
+
+    & .img {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        background-color: red;
+        border-radius: .8rem;
+        cursor: pointer;
+    }
+    
+    & #file {
+        display: none;
+    }
+    
+    & #alpha {
+        display: flex;
+        width: 20vw;
+        height: 40px;
+       border: none;
+       border-radius: .8rem;
+       margin: 0 .8rem;
+    }
+    
+    & #enter {
+        display: flex;
+        width: 50px;
+        height: 40px;
+        border: none;
+        border-radius: .8rem;
+    }
+}
+
 footer {
     width: 100%;
-    height: 100px;
+    height: 30rem;
     background-color: var(--bgf);
     justify-content: space-evenly;
 }
 
 .listEnd {
+    color: var(--txt);
+    background: var(--bgf);
     margin-top: 4rem;
 }
 

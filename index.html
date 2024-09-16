@@ -33,12 +33,11 @@
       <ul>
         <li><a class="links" href="https://www.instagram.com/eliasabrell/profilecard"><ion-icon class="icons"
               name="logo-instagram"></ion-icon>Instagram</a></li>
-        <li><a class="links" href="https://github.com/eslan069"><ion-icon class="icons"
-              name="logo-github"></ion-icon>GitHub</a></li>
         <li><a class="links" href="#"><ion-icon class="icons" name="logo-linkedin"></ion-icon>LinkedIn</a></li>
       </ul>
     </nav>
-    <button id="cv">Baixar CV</button>
+    <button id="cv"><a href="/abrell.pdf" class="down" download><ion-icon class="icon"
+          name="download-outline"></ion-icon>Baixar CV</a></button>
     <button id="theme"><ion-icon class="moon" name="moon"></ion-icon><ion-icon class="sunny"
         name="sunny"></ion-icon></button>
   </header>
@@ -89,8 +88,8 @@
           <h2 class="title">"Urban Decay"</h3>
             <p class="description">
               O próprio cliente poderá seguir o adipiscing da empresa.
-            Com o tempo a fuga dos prazeres, o direito do corpo de encontrar o presente exceto.
-            Isso é uma coisa trabalhosa.
+              Com o tempo a fuga dos prazeres, o direito do corpo de encontrar o presente exceto.
+              Isso é uma coisa trabalhosa.
             </p>
             <button>ver mais</button>
         </div>
@@ -148,22 +147,27 @@
       <a href="https://github.com/eslan069">Repositorio</a>
     </section>
 
-    <section>
+    <section id="service">
       <h3>Servicos</h3>
       <p>design UI/UX</p>
       <p>dev front-end</p>
       <p>consultoria</p>
     </section>
 
-    <aside id="message" class="sliderEnd">
-      <input type="text" name="message" id="">
+    <aside id="message">
+      <input type="checkbox" id="open">
+      <form action="#" class="contente">
+        <label for="file" class="img">
+          gggggg
+          <input type="file" accept="image/*" id="file">
+        </label>
+        <input type="text" name="message" id="alpha">
+        <input type="button" value="enviar" id="enter">
+      </form>
     </aside>
   </main>
 
   <footer>
-    <!--Copyright: Eslan Abrell.
-        todos os direitos reservados-->
-
     <details class="listEnd">
       <p>Redes</p>
       <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
@@ -173,10 +177,18 @@
       <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
     </details>
     <details class="listEnd">
-      <p>Contato</p>
-      <a>Telefone</a>
-      <a>E-mail:</a>
+      <p>Sobre nós</p>
+      <a href="#">Abrell</a>
+      <a href="#">Política</a>
     </details>
+    <details class="listEnd">
+      <p>Contato</p>
+      <a href="#">Telefone</a>
+      <a href="#">E-mail:</a>
+    </details>
+
+    <!--Copyright: Eslan Abrell.
+        todos os direitos reservados-->
 
     <nav id="browser">
       <ul>
