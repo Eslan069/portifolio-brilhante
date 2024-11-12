@@ -5,16 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewpoet" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:wght@400;500;700;900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css">
-  <link rel="shortcut icon" href="icon.png" type="image/x-icon">
-  <title>Abrell</title>
+    rel="stylesheet"><link rel="stylesheet" href="/assets/reset.css"><link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css"><link rel="shortcut icon" href="icon.png" type="image/x-icon">
+  <title>Portifolio Abrell</title>
 </head>
 
 <body>
@@ -25,8 +20,8 @@
         <li><a href="index.html">Início</a></li>
         <li><a href="#about">Sobre</a></li>
         <li><a href="#projects">Projetos</a></li>
-        <li><a href="#services">Serviços</a></li>
-        <li><a href="#message">Mensagem</a></li>
+        <li><a href="#service">Serviços</a></li>
+        <li class="message"><a href="#message">Mensagem</a></li>
       </ul>
     </nav>
     <nav class="menu">
@@ -35,11 +30,11 @@
               name="logo-instagram"></ion-icon>Instagram</a></li>
         <li><a class="links" href="#"><ion-icon class="icons" name="logo-linkedin"></ion-icon>LinkedIn</a></li>
       </ul>
-    </nav>
     <button id="cv"><a href="/abrell.pdf" class="down" download><ion-icon class="icon"
           name="download-outline"></ion-icon>Baixar CV</a></button>
-    <button id="theme"><ion-icon class="moon" name="moon"></ion-icon><ion-icon class="sunny"
-        name="sunny"></ion-icon></button>
+          <button id="theme"><ion-icon class="moon" name="moon"></ion-icon><ion-icon class="sunny"
+              name="sunny"></ion-icon></button>
+        </nav>
   </header>
 
   <main>
@@ -110,30 +105,46 @@
     </nav>
 
     <div class="subtitle">
-      <h2>Eslan Abrell - UI/UX Designer & Front-End Developer</h2>
-      <p class="phrase">Se as pessoas soubessem o valor que uma ideia tem, dariam o mundo para tê-la.</p>
+      <h2>Abrell - UI/UX Designer & Front-End Developer</h2>
+      <p class="phrase">"Se as pessoas soubessem o valor que uma ideia tem, dariam o mundo para tê-la."</p>
     </div>
 
     <section id="about">
       <h3>Quem sou eu?</h3>
       <div class="about">
-        <p>Eu sou Abrell, desenvolvedor Front-end.<br> Crio e desenvolvo web-aplictions focadas em gerar as melhores
+        <p>Eu sou Elias Abreu, desenvolvedor Front-end.<br> Crio e desenvolvo web-aplictions focadas em gerar as melhores
           experiências de usuarios</p>
         <p>Minhas habilidades</p>
         <div class="content">
-          <input type="radio" name="html" id="">
-          <input type="radio" name="css" id="">
-          <input type="radio" name="scss" id="">
-          <input type="radio" name="JavaScript" id="">
-          <input type="radio" name="php" id="">
-          <input type="radio" name="node.js" id="">
+          <div class="box">
+            <input type="radio" name="html" id="">
+          </div>
+          <div class="box">
+            <input type="radio" name="css" id="">
+          </div>
+          <div class="box">
+            <input type="radio" name="scss" id="">
+          </div>
+          <div class="box">
+            <input type="radio" name="JavaScript" id="">
+          </div>
+          <div class="box">
+            <input type="radio" name="php" id="">
+          </div>
+          <div class="box">
+            <input type="radio" name="node.js" id="">
+          </div>
         </div>
         <div class="content">
           <p>Tecnologias</p>
-          <input type="radio" name="figma" id="">
-          <input type="radio" name="vs code" id="">
-          <p>Uso o github para versionamento, figma para design de interfaces, e vscode para
-            desenvolvimento.</p>
+          <div class="box">
+            <input type="radio" name="figma" id="">
+          </div>
+          <div class="box">
+            <input type="radio" name="vs code" id="">
+            <p>Uso o github para versionamento, figma para design de interfaces, e vscode para
+              desenvolvimento.</p>
+            </div>
         </div>
       </div>
     </section>
@@ -142,23 +153,35 @@
     <section id="projects">
       <h3>Projetos desenvolvidos</h3>
       <div class="projects">
-        <a href="components/calculator/index.html">Calculadora</a>
-        <img src="#" alt="calculadora paia">
-        <details>Uma calculadora simples, criada com HTML, CSS e JS.</details>
-        <a href="components/terceirao/index.html">Terçeião B</a>
-        <img src="#" alt="site incompleto">
-        <details>Um site simples para um memorial de formados em 2023.</details>
+        <div class="box">
+          <a href="components/calculator/index.html">Calculadora</a>
+          <img src="#" alt="calculadora paia">
+          <details>Uma calculadora simples, criada com HTML, CSS e JS.</details>
+        </div>
+        <div class="box">
+          <a href="components/terceirao/index.html">Terçeião B</a>
+          <img src="#" alt="site incompleto">
+          <details>Um site simples para um memorial de formados em 2023.</details>
+        </div>
         <!--por um filtro por categoria: UI/UX. DEV Web-->
-        <a href="https://github.com/eslan069">Repositorio</a>
+        <div class="box">
+          <a href="https://github.com/eslan069">Repositorio</a>
+        </div>
       </div>
     </section>
 
     <section id="service">
       <h3>Servicos</h3>
       <div class="service">
-        <p>design UI/UX</p>
-        <p>dev front-end</p>
-        <p>consultoria</p>
+        <div class="box">
+          <p>Design UI/UX</p>
+        </div>
+        <div class="box">
+          <p>Dev front-end</p>
+        </div>
+        <div class="box">
+          <p>Consultoria</p>
+        </div>
       </div>
     </section>
 
@@ -178,11 +201,11 @@
   <footer>
     <div class="listEnd">
       <p>Redes</p>
-      <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-      <a href="https://www.instagram.com/eliasabrell/profilecard"><ion-icon name="logo-instagram"></ion-icon></a>
-      <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
-      <a href="https://github.com/eslan069"><ion-icon name="logo-github"></ion-icon></a>
-      <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+      <a href="#"><ion-icon class="a" name="logo-twitter"></ion-icon>Twitter, pois o X foi de vasco</a>
+      <a href="https://www.instagram.com/eliasabrell/profilecard"><ion-icon class="a" name="logo-instagram"></ion-icon>Instagram</a>
+      <a href="#"><ion-icon class="a" name="logo-youtube"></ion-icon>Youtube</a>
+      <a href="https://github.com/eslan069"><ion-icon class="a" name="logo-github"></ion-icon>Github</a>
+      <a href="#"><ion-icon class="a" name="logo-linkedin"></ion-icon>LinkedIn</a>
     </div>
     <div class="listEnd">
       <p>Sobre nós</p>
@@ -191,14 +214,14 @@
     </div>
     <div class="listEnd">
       <p>Contato</p>
-      <a href="#">Telefone</a>
-      <a href="#">E-mail:</a>
+      <a href="#">Telefone: 11 777-666</a>
+      <a href="#">E-mail: abreu.io@outlook.com</a>
     </div>
     <div id="Copyright">
-      <p>Copyright &copy 2024 Eslan Abrell. Todos os Direitos Reservados</p>
+      <p>Copyright &copy 2024 Abrell. Todos os Direitos Reservados</p>
     </div>
 
-    <nav id="browser">
+    <nav id="navigation">
       <ul>
         <li><a href="index.html"><ion-icon name="home"></ion-icon></a></li>
         <li><a href="#about"><ion-icon name="information-circle"></ion-icon></a></li>
@@ -211,7 +234,7 @@
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <script src="main.js"></script>
+  <script src="/assets/main.js"></script>
   <noscript>Para usar este site, por favor, ative o JavaScript no seu navegador.</noscript>
 </body>
 
