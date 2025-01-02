@@ -7,6 +7,23 @@
     --txt: #dddddd;
     --icn: #676767;
     --sdw: #323232;
+    --sun: 1.7rem;
+    --moo: 0;
+    --shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+[data-theme=light] {
+    --bg: #dddddd;
+    --bgh: #dedede;
+    --bgb: #7d7c7c;
+    --bgf: #181818;
+    --elm: #2a2a2a;
+    --txt: #181818;
+    --icn: #676767;
+    --sdw: #323232;
+    --sun: 0;
+    --moo: 1.7rem;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
 }
 
 ::-webkit-scrollbar {
@@ -26,6 +43,7 @@ body {
     place-items: center;
     background: var(--bg);
     overflow-x: hidden;
+    transition: 200ms ease-in-out;
 }
 
 header,
@@ -60,15 +78,15 @@ header {
     justify-content: space-between;
     background: var(--bgh);
     box-shadow: -5px -3px 10px rgba(255, 255, 255, 0.05),
-        -5px 3px 15px rgba(0, 0, 0, 0.5);
+    -5px 3px 15px rgba(0, 0, 0, 0.5);
     top: 0;
     padding: 0 1em 0 1rem;
     z-index: 5;
-
+    
     & nav {
         padding: .8em 0;
         justify-content: center;
-        
+
         & ul {
             align-items: center;
             justify-content: center;
@@ -110,17 +128,17 @@ h1 {
     border-radius: 50%;
     transition: .4s;
     cursor: pointer;
-
+    
     & .moon {
         position: absolute;
-        font-size: 1.7rem;
+        font-size: var(--moo);
         border-radius: 50%;
         transition: .5s;
     }
 
     & .sunny {
         position: absolute;
-        font-size: 0;
+        font-size: var(--sun);
         border-radius: 50%;
         transition: .5s;
     }
@@ -128,14 +146,15 @@ h1 {
 
 #theme:hover {
     & .moon {
-        transform: rotate(0.75turn);
-        opacity: 0;
+        color: var(--txt);
+        font-size: 1.7rem;
+        transform: rotate(-1turn);
     }
-
+    
     & .sunny {
         color: var(--txt);
         font-size: 1.6rem;
-        transform: rotateZ(-0.5turn);
+        transform: rotate(0.75turn);
     }
 }
 
@@ -180,7 +199,7 @@ h1 {
 
 #cv:hover {
     font-size: 0;
-    
+
     & .icon {
         padding-left: 2rem;
         padding-right: 2rem;
@@ -202,7 +221,7 @@ main {
     position: relative;
     width: 100vw;
     height: 80vh;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 10px #0000004d;
 }
 
 .item {
@@ -215,8 +234,8 @@ main {
     z-index: 1;
     background-position: center;
     background-size: cover;
+    box-shadow: 0 20px 30px #9586864d inset;
     border-radius: 20px;
-    box-shadow: 0 20px 30px rgba(255, 255, 255, 0.3) inset;
     transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
 
     &:nth-child(1),
@@ -230,19 +249,19 @@ main {
         box-shadow: none;
         opacity: 1;
     }
-    
+
     &:nth-child(3) {
         left: 50%;
     }
-    
+
     &:nth-child(4) {
         left: calc(50% + 220px);
     }
-    
+
     &:nth-child(5) {
         left: calc(50% + 440px);
     }
-    
+
     &:nth-child(6) {
         left: calc(50% + 660px);
         opacity: 0;
@@ -255,7 +274,7 @@ main {
     top: 50%;
     left: 8rem;
     transform: translateY(-50%);
-    font: 400 0.85rem helvetica, sans-serif;
+    font: 400 0.9rem helvetica, sans-serif;
     color: white;
     text-align: start;
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
@@ -265,26 +284,28 @@ main {
     & .title {
         font-family: 'arial-black';
         text-transform: uppercase;
+        color: #dddddd;
     }
     
     & .description {
         line-height: 1.7;
         margin: 1rem 0 1.5rem;
-        font-size: 0.8rem;
+        font-size: 0.95rem;
+        color: #dddddd;
     }
     
     & button {
         width: fit-content;
-        background-color: var(--elm);
         color: rgb(23, 23, 23);
         font-weight: bold;
+        font-size: 0.9rem;
         border: none;
         border-radius: .7rem;
         padding: 0.75rem;
         cursor: pointer;
-        z-index: 1;
-        
+        z-index: 4;
     }
+    
     & button:hover {
         background-color: var(--txt);
     }
@@ -315,7 +336,7 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 0 3rem 0;
-    z-index: 4;
+    z-index: 3;
     user-select: none;
     
     & .btn {
@@ -323,9 +344,10 @@ main {
         color: transparent;
         transition: 300ms;
     }
+
     &:hover {
         & .btn {
-            background-color: var(--txt);
+            background-color: #dddddd;
             color: rgba(0, 0, 0, 0.7);
             margin: 0 0.25rem;
             padding: 0.90rem;
@@ -344,13 +366,13 @@ main {
     align-items: center;
     justify-content: center;
     padding-top: 4.2rem;
-    
+
     & h2 {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 1.4rem;
         font-weight: bold;
     }
-    
+
     & .phrase {
         padding: 2em 0 6em;
     }
@@ -365,14 +387,7 @@ main {
     border-radius: 1rem;
     margin: 2rem 2.5rem 4rem;
     background: var(--bgb);
-
-    & .contenty {
-
-    }
-
-    .box p {
-        padding: 0;
-    }
+    box-shadow: var(--shadow); 
 }
 
 .projects {
@@ -382,6 +397,7 @@ main {
     border-radius: 1rem;
     margin: 2rem 2.5rem 4rem;
     background: var(--bgb);
+    box-shadow: var(--shadow); 
 }
 
 .service {
@@ -390,13 +406,28 @@ main {
     padding: 0 0 3rem;
     border-radius: 1rem;
     margin: 2em 2.5rem 4rem;
+    box-shadow: var(--shadow); 
     background: var(--bgb);
+}
+
+.service button {
+    color: rgb(23, 23, 23);
+    font-weight: bold;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: .7rem;
+    padding: 0.75rem;
+    cursor: pointer;
 }
 
 .box {
     display: flex;
     flex-wrap: wrap;
     margin: 40px;
+    
+    & p {
+        padding: 0;
+    }
 }
 
 h3 {
@@ -442,13 +473,13 @@ aside {
     left: 2px;
     bottom: 4px;
     z-index: 3;
-    
+
     & #open {
         display: block;
         position: absolute;
         height: 20px;
     }
-    
+
     & .contente {
         display: flex;
         position: absolute;
@@ -458,7 +489,7 @@ aside {
         height: 60px;
         bottom: 1rem;
     }
-    
+
     & .img {
         display: flex;
         width: 40px;
@@ -467,11 +498,11 @@ aside {
         border-radius: .8rem;
         cursor: pointer;
     }
-    
+
     & #file {
         display: none;
     }
-    
+
     & #alpha {
         display: flex;
         width: 20vw;
@@ -480,7 +511,7 @@ aside {
         border-radius: .8rem;
         margin: 0 .8rem;
     }
-    
+
     & #enter {
         display: flex;
         width: 50px;
@@ -494,26 +525,27 @@ footer {
     display: flex;
     width: 100%;
     background: var(--bgf);
-    padding: 4rem 0 2rem;
-    
+    padding: 4rem 3rem 3rem;
+
     & .listEnd {
         flex-direction: column;
-        color: var(--txt);
-        padding: 0 3rem 2rem;
+        color: #dddddd;
+        padding: 0 3em 2em 0;
     }
-    
+
     & #Copyright {
         border-top: 2px solid var(--elm);
         padding: 1rem 3rem 0;
     }
-    
+
     & p {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: .9rem;
+        color: #dddddd;
         font-weight: 500;
         padding: 0;
     }
-    
+
     & .a {
         padding-right: 6px;
     }
@@ -523,7 +555,7 @@ footer {
     h1 {
         font-size: 1.1rem;
     }
-    
+
     .menu ul li a {
         font-size: 1rem;
         padding: 0 .8rem;
@@ -533,13 +565,13 @@ footer {
         font-size: 1.4rem;
         margin-right: .2rem;
     }
-    
-    #theme{
+
+    #theme {
         & .moon {
             font-size: 1.5rem;
         }
     }
-    
+
     #cv {
         height: 26px;
         margin: 0 1.3rem;
@@ -551,27 +583,27 @@ footer {
     header {
         justify-content: center;
     }
-    
+
     h1 {
         font-size: 1.1rem;
     }
-    
+
     .menu ul li a {
         font-size: 1rem;
         padding: 0 .7rem;
     }
-    
+
     .icons {
         font-size: 1.4rem;
         margin-right: .2rem;
     }
-    
-    #theme{
+
+    #theme {
         & .moon {
             font-size: 1.4rem;
         }
     }
-    
+
     #cv {
         height: 26px;
         margin: 0 1rem;
@@ -581,11 +613,17 @@ footer {
     .content {
         left: 5rem;
 
-        & .title {font-size: 1rem;}
+        & .title {
+            font-size: 1rem;
+        }
 
-        & .description {font-size: 0.7rem;}
+        & .description {
+            font-size: 0.7rem;
+        }
 
-        & button {font-size: 0.7rem;}
+        & button {
+            font-size: 0.7rem;
+        }
     }
 
     .item {
@@ -661,17 +699,16 @@ footer {
 
 @media screen and (max-width: 767px) {
 
+    body {
+        justify-content: center;
+        background: var(--bg);
+    }
+
     #navigation,
     #navigation ul,
     #navigation li,
     #navigation a {
         display: flex;
-    }
-
-    body {
-        position: fixed;
-        justify-content: center;
-        background: var(--bg);
     }
 
     #navigation {

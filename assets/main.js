@@ -1,3 +1,10 @@
+let button = document.getElementById('theme');
+    button.addEventListener('click', function() {
+    let currentTheme = document.documentElement.getAttribute('data-theme');
+    let newTheme = (currentTheme === 'light') ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', newTheme);
+});
+
 const slider = document.querySelector('.slider');
 
 function activate(e) {
